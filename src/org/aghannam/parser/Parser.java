@@ -36,8 +36,9 @@ import org.aghannam.lex.Lexer.TokenType;
  * <p>
  * Within this class, each non-helper method corresponds to exactly one non-terminal as displayed above. Similarly, 
  * each token (i.e. terminal) corresponds to a call of the method named <code>match()</code>, which consumes it and jumps 
- * to the next token. Finally, this parser relies on the presence of the file Lexer.java, which provides it with the token stream. 
- * In this case, the 'token stream' is simply an <code>ArrayList</code> of <code>Token</code> objects sent to this parser as input. 
+ * to the next token. Finally, this parser relies on the presence of the file Lexer.java, which provides it with the token 
+ * stream. In this case, the 'token stream' is simply an <code>ArrayList</code> of <code>Token</code> objects sent to this 
+ * parser as input. 
  * 
  * @author Ahmed Ghannam (amalghannam@crimson.ua.edu)
  */
@@ -60,7 +61,7 @@ public class Parser {
 			this.tokens = new ArrayList<Token>(tokens);
 			this.tagNames = new Stack<String>();
 			this.attributeNames = new HashSet<String>();
-			this.lookahead = this.tokens.get(0); // Initially, lookahead is assigned the first token in the token stream 
+			this.lookahead = this.tokens.get(0); // Initially, lookahead is assigned the first input token 
 
 			// Begin parsing from document(), which represents the start symbol of the grammar
 			document();
