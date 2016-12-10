@@ -83,9 +83,7 @@ public class Parser {
 			this.tokens = new ArrayList<Token>(tokens);
 			this.tagNames = new Stack<String>();
 			this.attributeNames = new HashSet<String>();
-			this.lookahead = this.tokens.get(0); // Initially, lookahead is
-													// assigned the first token
-													// in the token stream
+			this.lookahead = this.tokens.get(0); 
 
 			// Begin parsing from document(), which represents the start symbol
 			// of the grammar
