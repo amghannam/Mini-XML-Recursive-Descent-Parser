@@ -1,5 +1,5 @@
 ## Mini-XML Recursive-Descent Parser
-This program implements a recursive-descent parser for a fictional subset of XML. The LL(1) grammar recognized by the parser is the following:
+This program implements a recursive-descent (aka top-down) parser for a fictional subset of XML. The LL(1) grammar recognized by the parser is the following:
 
 ```
 document ::= element EOF
