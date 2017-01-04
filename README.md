@@ -40,39 +40,15 @@ When we run the parser on this file, the output is:
 document ::= element EOF
 element ::= < elementPrefix
 elementPrefix ::= NAME attribute elementSuffix
+attribute ::= NAME = STRING attribute
+attribute ::= NAME = STRING attribute
+attribute ::= NAME = STRING attribute
+attribute ::= NAME = STRING attribute
 attribute ::= EPSILON
 elementSuffix ::= > elementOrData endTag
-elementOrData ::= element elementOrData
-element ::= < elementPrefix
-elementPrefix ::= NAME attribute elementSuffix
-attribute ::= NAME = STRING attribute
-attribute ::= NAME = STRING attribute
-attribute ::= NAME = STRING attribute
-attribute ::= NAME = STRING attribute
-attribute ::= EPSILON
-elementSuffix ::= />
-elementOrData ::= element elementOrData
-element ::= < elementPrefix
-elementPrefix ::= NAME attribute elementSuffix
-attribute ::= NAME = STRING attribute
-attribute ::= NAME = STRING attribute
-attribute ::= NAME = STRING attribute
-attribute ::= NAME = STRING attribute
-attribute ::= NAME = STRING attribute
-attribute ::= NAME = STRING attribute
-attribute ::= EPSILON
-elementSuffix ::= />
-elementOrData ::= element elementOrData
-element ::= < elementPrefix
-elementPrefix ::= NAME attribute elementSuffix
-attribute ::= NAME = STRING attribute
-attribute ::= NAME = STRING attribute
-attribute ::= NAME = STRING attribute
-attribute ::= NAME = STRING attribute
-attribute ::= NAME = STRING attribute
-attribute ::= NAME = STRING attribute
-attribute ::= EPSILON
-elementSuffix ::= />
+elementOrData ::= DATA elementOrData
+elementOrData ::= DATA elementOrData
+elementOrData ::= DATA elementOrData
 elementOrData ::= EPSILON
 endTag ::= </ NAME >
 
