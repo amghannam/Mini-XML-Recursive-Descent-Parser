@@ -14,7 +14,19 @@ elementOrData ::= DATA elementOrData
 elementOrData ::= EPSILON
 endTag ::= </ NAME >
 ```
-Where the tokens/terminal symbols are ```NAME```, ```STRING```, ```DATA```, ```<```, ```>```, ```</```, ```/>```, and ```=```. The grammar is necessarily right-recursive. 
+
+The grammar can also be rewritten in Extended BNF form as follows:
+
+```
+document  ::=  element
+element   ::=  start_tag (element | DATA)* end_tag | empty_tag
+start_tag ::=  < NAME attribute* >
+end_tag   ::=  </ NAME >
+empty_tag ::=  < NAME attribute* />
+attribute ::=  NAME = STRING
+```
+
+Where the tokens/terminal symbols are ```NAME```, ```STRING```, ```DATA```, ```<```, ```>```, ```</```, ```/>```, and ```=```. The LL(1) grammar is necessarily right-recursive. 
 
 ## How to Run
 
